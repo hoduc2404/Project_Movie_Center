@@ -17,7 +17,6 @@ export class ListMoviewComponent implements OnInit {
   getListMovie(){
     this.Movie.getListMovie().subscribe({
       next:(res) =>{
-        console.log(res);
       },
       error:(err) =>{
         console.log(err)

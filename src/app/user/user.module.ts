@@ -9,6 +9,9 @@ import { CarouselComponent } from './home/carousel/carousel.component';
 import { MovieScheduleHandleComponent } from './home/movie-schedule-handle/movie-schedule-handle.component';
 import { ListMoviewComponent } from './home/list-moview/list-moview.component';
 import { MovieItermComponent } from './home/list-moview/movie-iterm/movie-iterm.component';
+import { ModalYoutubeComponent } from './home/modal-youtube/modal-youtube.component';
+import { PipeModule } from '../pipe/pipe.module';
+import {MatButtonModule} from '@angular/material/button';
 
 const routes: Routes = [{ 
       path: '', component: UserComponent,
@@ -26,8 +29,9 @@ const routes: Routes = [{
     MovieScheduleHandleComponent,
     ListMoviewComponent,
     MovieItermComponent,
+    ModalYoutubeComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(routes)],
-  exports: [UserComponent, HeaderComponent, FooterComponent, HomeComponent,CarouselComponent,MovieScheduleHandleComponent,ListMoviewComponent,MovieItermComponent],
+  imports: [CommonModule, RouterModule.forChild(routes),PipeModule,MatButtonModule],
+  exports: [UserComponent, HeaderComponent, FooterComponent, HomeComponent,CarouselComponent,MovieScheduleHandleComponent,ListMoviewComponent,MovieItermComponent,ModalYoutubeComponent],
 })
 export class UserModule {}

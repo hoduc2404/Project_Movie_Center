@@ -1,19 +1,25 @@
 <div class="movie_schedule py-4">
     <div class="movie_schedule_content container">
         <div class="row">
-                <div class="dropdown col-12 col-sm ">
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown button
+                <div class="dropdown col-xl my-1 my-xl-0">
+                    <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{textPhim}}
                     </button>
-                    <div class="dropdown-menu" style="width: 200px;overflow-x: scroll;" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here asdasdsadsadsda Something else here asdasdsadsadsda</a>
+                    <div class="dropdown-menu w-100" style="height: 300px;overflow-y: scroll;" aria-labelledby="dropdownMenuButton">
+                      <a (click)="clickSelectPhim(phim.tenPhim,phim.maPhim)" href="#" *ngFor="let phim of listPhimGet" class="dropdown-item" style="cursor: pointer;">{{phim.tenPhim}}</a>
                     </div>
                   </div>
-                <div class="dropdown col-12 col-sm">
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown button
+                <div class="dropdown col-xl my-1 my-xl-0">
+                    <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      {{textRap}}
+                    </button>
+                    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                      <a (click)="clickSelectRap(rap.tenHeThongRap,rap.maHeThongRap)" href="#" *ngFor="let rap of listCinema" class="dropdown-item" style="cursor: pointer;">{{rap.tenHeThongRap}}</a>
+                    </div>
+                  </div>
+                <div class="dropdown col-xl my-1 my-xl-0">
+                    <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Ngày Xem
                     </button>
                     <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Action</a>
@@ -21,9 +27,9 @@
                       <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                   </div>
-                <div class="dropdown col-12 col-sm">
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown button
+                <div class="dropdown col-xl my-1 my-xl-0">
+                    <button class="btn btn-dark dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Suất Chiếu
                     </button>
                     <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">Action</a>
@@ -31,18 +37,8 @@
                       <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                   </div>
-                <div class="dropdown col-12 col-sm">
-                    <button class="btn btn-secondary dropdown-toggle w-100" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Dropdown button
-                    </button>
-                    <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                <div class="col-12 col-sm">
-                    <button class="btn btn-warning w-100 font-weight-bold text-light" type="button">
+                <div class="Button_m col-xl my-1 my-xl-0">
+                    <button  class="btn button_mua w-100 font-weight-bold" type="button">
                       Mua vé
                     </button>
                   </div>

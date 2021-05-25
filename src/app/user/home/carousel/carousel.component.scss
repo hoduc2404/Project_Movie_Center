@@ -1,4 +1,6 @@
 .slide{
+    // position: relative;
+    background-color: black;
     .carousel-item{
         position: relative;
         cursor: pointer;
@@ -30,27 +32,13 @@
             }
         }
     }
+    // .Modal_youtu_be{
+    //     position: absolute;
+    //     top: 20%;
+    //     left: 30%;
+    //     z-index: 1000;
+    // }
 }
-body {margin:2rem;}
 
-.modal-dialog {
-      max-width: 800px;
-      margin: 30px auto;
-  }
+    
 
-
-
-.modal-body {
-  position:relative;
-  padding:0px;
-}
-.close {
-  position:absolute;
-  right:-30px;
-  top:0;
-  z-index:999;
-  font-size:2rem;
-  font-weight: normal;
-  color:#fff;
-  opacity:1;
-}
